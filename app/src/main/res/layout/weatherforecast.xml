@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="510dp"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+
+        android:background="@drawable/radius"
+        >
+
+        <!--界面标题-->
+        <TextView
+            android:id="@+id/currentWeather"
+            style="@style/textStyle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#faf9f9"
+
+            android:layout_centerHorizontal="true"
+            android:text="天气实况" />
+        <!--城市-->
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#faf9f9"
+            android:textSize="16sp"
+            android:text="南昌" />
+        <!--现在的时间-->
+        <DigitalClock
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/city"
+            android:layout_below="@id/city"
+            android:textColor="#faf9f9"
+            android:textSize="20sp"
+            />
+        <!--日期-->
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/city"
+            android:layout_below="@id/time"
+            android:textColor="#faf9f9"
+            android:textSize="12sp"
+            />
+        <!-- 刷新时间-->
+        <TextView
+            android:id="@+id/refreshTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/city"
+            android:layout_below="@id/date"
+            android:textColor="#faf9f9"
+            android:drawableLeft="@mipmap/refresh"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+        <!--布局右侧的天气信息-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp"
+            android:paddingTop="10dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            >
+            <!--温度-->
+            <TextView
+                android:id="@+id/temperView"
+                style="@style/textStyle"
+                android:textSize="16sp"/>
+            <!--风的方向-->
+            <TextView
+                android:id="@+id/windDirView"
+                style="@style/textStyle"
+
+                />
+            <!--风力大小-->
+            <TextView
+                android:id="@+id/windPower"
+                style="@style/textStyle" />
+            <!--温度-->
+            <TextView
+                android:id="@+id/humiddityView"
+                style="@style/textStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--下面的温馨提示-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="温馨提示"
+        android:textSize="20sp"
+        android:textColor="#faf9f9"
+        android:gravity="center"
+        />
+    <com.example.liu.weathercast.view.CornerListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius"
+        android:divider="#000000"
+        android:layout_margin="5dp"
+        android:id="@+id/weatherHints">
+
+    </com.example.liu.weathercast.view.CornerListView>
+</LinearLayout>
